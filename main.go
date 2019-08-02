@@ -17,6 +17,7 @@ func main() {
 
 	// ルーティング
 	e.GET("/hello", hello)
+	e.GET("/user", user)
 
 	// サーバー起動
 	e.Start(":1323")
@@ -25,4 +26,9 @@ func main() {
 // Handler
 func hello(c echo.Context) error {
 	return c.String(http.StatusOK, "Hello, World!")
+}
+
+// Handler
+func user(c echo.Context) error {
+	return c.String(http.StatusOK, "Hello, World!!")
 }
